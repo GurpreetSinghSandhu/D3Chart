@@ -1,0 +1,75 @@
+{
+  "name" : "max",
+  "value" : 100,
+  "children" : [
+    {
+      "name" : "abc",
+      "value" : 75,
+      "children" : [
+          {
+            "name" : "a",
+            "value" : 50
+          },
+          {
+            "name" : "b",
+            "value" : 50,
+            "children" : [
+                {
+                  "name" : "ba",
+                  "value" : 25
+                },
+                {
+                  "name" : "bb",
+                  "value" : 25
+                },
+                {
+                  "name" : "bc",
+                  "value" : 25
+                }
+            ]
+          },
+          {
+            "name" : "c",
+            "value" : 50,
+            "children" : [
+                {
+                  "name" : "ca",
+                  "value" : 25
+                },
+                {
+                  "name" : "cb",
+                  "value" : 25
+                },
+                {
+                  "name" : "cc",
+                  "value" : 25
+                }
+            ]
+          }
+      ]
+    },
+    {
+      "name" : "de",
+      "value" : 100,
+      "children" : [
+          {
+            "name" : "d",
+            "value" : 50
+          },
+          {
+            "name" : "e",
+            "value" : 50
+          }
+      ]
+    },
+    {
+      "name" : "f",
+      "value" : 100
+    }
+    ,
+    {
+      "name" : "g",
+      "value" : 100
+    }
+  ]
+}

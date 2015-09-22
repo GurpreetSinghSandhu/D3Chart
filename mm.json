@@ -1,0 +1,27 @@
+{
+  "name" : "max",
+  "value" : 100,
+  "children" : [
+    {
+      "name" : "abc",
+      "value" : 75,
+      "children" : [
+          { "name" : "a123", "value" : 25 },
+          { "name" : "b123", "value" : 25 },
+          { "name" : "c123", "value" : 25 }
+      ]
+    },
+    {
+      "name" : "de",
+      "value" : 75,
+      "children" : [
+          { "name" : "d123", "value" : 25 },
+          { "name" : "e123", "value" : 25 }
+      ]
+    },
+    {
+      "name" : "fgh",
+      "value" : 75
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <title>Untitled Document</title>
+    <script type="text/javascript" src="js/d3.min.js" ></script>
+    </head>
+<body>
+    <script>
+	
+	var width=1000;
+	var height=1000;
+	
+	var canvas = d3.select("body")
+				.append("svg")
+				.attr("width",width)
+				.attr("height",height);
+	
+
+    d3.json("states.json", function(data){
+		
+		var group = canvas.selectAll("g")
+				.data(data.features)
+				.enter()
+					.append("g")
+					.attr("transform","translate(0,0)");
+		
+		//console.log(data);
+					
+		//var projection = d3.geo.mercator().scale(0).translate(0,1980);
+		var projection = d3.geo.mercator().scale((width + 3000) / 4).translate([-800, height ]).precision(.1);
+		//console.log(projection);
+		
+		var path = d3.geo.path().projection(projection);
+		//console.log(path);
+		
+		
+		var areas = group.append("path")
+				.attr("d",path)
+				.attr("class","area")
+				.attr("fill","steelblue");
+				
+		group.append("text")
+			.attr("x",function(d){ return path.centroid(d)[0]; })
+			.attr("y",function(d){ return path.centroid(d)[1]; })
+			.attr("text-anchor","middle")
+			.text(function(d){ return d.id; });
+    });
+
+    </script>
+</body>
+</html>
